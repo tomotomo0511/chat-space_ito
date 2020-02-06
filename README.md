@@ -31,7 +31,7 @@ Things you may want to cover:
 |name|string|null: false|
 ## Association
 - has_many :messages
-- has_many :groups
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 

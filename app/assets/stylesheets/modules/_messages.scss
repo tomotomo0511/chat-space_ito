@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.chat-side {
+  width: 300px;
+  background-color: #253141;
+  &__header {
+    height: 100px;
+    background-color: #253141;
+   
+    &__box {
+      height: 20px;
+      width: 260px;
+      color: black;
+      background-color: white;
+    }
+  }
+  &__groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+  }
+
+}
+
+.chat-main {
+  background-color: red;
+  width: calc(100% - 300px);
+  &__header {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+  }
+  &__messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+  }
+}

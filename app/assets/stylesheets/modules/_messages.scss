@@ -5,6 +5,8 @@
 .wrapper {
   display: flex;
   height: 100vh;
+  background-color: #fafafa;
+  width: 100vw;
 }
 
 .chat-side {
@@ -13,36 +15,161 @@
   &__header {
     height: 100px;
     background-color: #253141;
-   
+    display: flex;
+    align-items: center;
+    color:white;
     &__box {
       height: 20px;
       width: 260px;
-      color: black;
-      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 20px;
+      font-weight: bold;
+      &__menu {
+        display: flex;
+        li {
+          a {
+            color: white;
+          }
+
+        }
+      }
     }
   }
   &__groups {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    padding: 20px;
+    .group {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 40px;
+      
+    }
   }
-
 }
 
 .chat-main {
-  background-color: red;
   width: calc(100% - 300px);
   &__header {
     height: 100px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
+    padding: 0px 40px;
+    display: flex;
+    &__left-box {
+      margin-top: 35px;
+      &__current-group {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333333;
+      }
+      &__member-list {
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        &__member {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    &__right-box {
+      line-height: 40px;
+      right: 40px;
+      position: absolute;
+      height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      .edit {
+        color: #38aef0;
+        text-decoration: none;
+      }
+    }
   }
   &__messages {
     height: calc(100vh - 190px);
-    background-color: #fafafa;
+    margin-left: 40px;
+    &__box1 {
+      margin-bottom: 46px;
+      margin-top: 35px;
+      &__upper-info1 {
+        display: flex;
+        margin-bottom: 12px;
+        &__talker1 {
+          font-size: 16px;
+        }
+        &__date1 {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__text1 {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+    &__box2 {
+      &__upper-info2 {
+        display: flex;
+        margin-bottom: 12px;
+        &__talker2 {
+          font-size: 16px;
+        }
+        &__date2 {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__text2 {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
   }
   &__form {
-    height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
+    height: 90px;
+    position: absolute;
+    width: 1140px;
+    bottom: 0px;
+
+    form {
+      display: flex;
+      .input-box {
+        width: 100%;
+        position: relative;
+        display: flex;
+
+        &__text {
+          width: 100%;
+          height: 50px;
+          color: #434a54;
+          border-style: none;
+          padding: 0 40px 0 10px;
+        }
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        font-size: 16px;
+        cursor: pointer;
+        color: white;
+      }
+    }
   }
 }

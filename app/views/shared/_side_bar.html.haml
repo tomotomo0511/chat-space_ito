@@ -1,0 +1,18 @@
+.chat-side
+  .chat-side__header
+    .chat-side__header__box
+      %p.chat-side__header__box__username
+        伊藤
+      %ul.chat-side__header__box__menu
+        %li.chat-side__header__box__edit
+          = link_to "#" do
+            = icon('fas', 'edit') 
+        %li.chat-side__header__box__cog
+          = link_to "#" do
+            = icon('fas', 'cog') 
+  .chat-side__groups
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test
+      %p.group__latest-message
+        まだメッセージはありません

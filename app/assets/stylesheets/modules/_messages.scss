@@ -40,11 +40,18 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px;
-    .group {
-      color: white;
-      text-decoration: none;
+    overflow: scroll;
+    &__group {
       margin-bottom: 40px;
-      
+      &__group-name {
+        color: white;
+      }
+      &__latest-message {
+        color: white;
+      }
+    }
+    a{
+      text-decoration: none;
     }
   }
 }

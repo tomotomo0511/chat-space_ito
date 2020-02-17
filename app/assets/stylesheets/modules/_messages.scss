@@ -98,6 +98,7 @@
   &__messages {
     height: calc(100vh - 190px);
     margin-left: 40px;
+    overflow: scroll;
     &__box1 {
       margin-bottom: 46px;
       margin-top: 35px;

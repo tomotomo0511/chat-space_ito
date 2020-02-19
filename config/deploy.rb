@@ -1,6 +1,6 @@
 lock '3.12.0'
 
-set :application, 'chat-space'
+set :application, 'chat-space_ito'
 
 set :repo_url,  'git@github.com:tomotomo0511/chat-space_ito.git'
 

@@ -3,25 +3,28 @@ $(function(){
     if ( message.content && message.image) {
       var html =
         `<div class="message" data-message-id=${message.id}>
-          <div class="chat-main__messages__box1__upper-info1">
-          <div class="chat-main__messages__box1__upper-info1__talker1">
-            ${message.user_name}
-          </div>
-          <div class="chat-main__messages__box1__upper-info1__date1">
-            ${message.created_at}
-          </div>
-          </div>
-          <div class="chat-main__messages__box1__text1">
-            <p class="lower-message__content">
-             ${message.content}
-            </p>
-          </div>
+          <div class="chat-main__messages__box1">
+            <div class="chat-main__messages__box1__upper-info1">
+              <div class="chat-main__messages__box1__upper-info1__talker1">
+                ${message.user_name}
+              </div>
+              <div class="chat-main__messages__box1__upper-info1__date1">
+                ${message.created_at}
+              </div>
+            </div>
+            <div class="chat-main__messages__box1__text1">
+             <p class="lower-message__content">
+               ${message.content}
+             </p>
+            </div>
             <img src=${message.image} >
+            </div>
           </div>`
         return html;
       } else if (message.content) {
         var html =
          `<div class="message" data-message-id=${message.id}>
+           <div class="chat-main__messages__box1">
             <div class="chat-main__messages__box1__upper-info1">
               <div class="chat-main__messages__box1__upper-info1__talker1">
                 ${message.user_name}
@@ -35,6 +38,7 @@ $(function(){
                 ${message.content}
               </p>
             </div>
+           </div> 
           </div>`
         return html;
       } else if (message.image) {

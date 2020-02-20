@@ -49,7 +49,7 @@ $(function(){
             </div>
           </div>
           <div class="chat-main__messages__box1__text1">
-            <img src=${message.image}"class="lower-message__image" >
+            <img src=${message.image} class="lower-message__image" >
           </div>
         </div>`
       return html;

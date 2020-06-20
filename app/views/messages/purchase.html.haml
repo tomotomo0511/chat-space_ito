@@ -1,0 +1,92 @@
+.purchase-header
+  .purchase-header__logo
+    = link_to '/', class: 'header-logo' do
+      = image_tag asset_path('logo/logo.png'), class: 'header-logo'
+
+
+
+
+.purchase-box
+  .purchase-box__main
+    .purchase-box__main__check
+      .purchase-box__main__check__namebox
+        %h2.purchase-content 購入内容の確認 
+
+    .purchase-box__main__item
+      .purchase-box__main__item__box
+      -# イメージ
+    
+        .purchase-box__main__item__box__image
+          = image_tag asset_path("#{@item.images.first.image}"), class: "item-main-img"
+        .purchase-box__main__item__box__message
+        -# タイトル
+      
+          .purchase-box__main__item__box__message--title
+            %p.purchase-item-title
+              = @item.title
+          -# プライス
+      
+          .purchase-box__main__item__box__message--price
+            %p.purchase-item-price
+              = @item.price "(税込) 送料込み" 
+
+
+
+
+
+    .purchase-box__main__confirmation
+      .purchase-box__main__confirmation__box
+        .purchase-box__main__confirmation__box__title
+          %p.purchase-item-title
+            = @item.title
+        .purchase-box__main__confirmation__box__price
+          %p.purchase-item-price
+            = @item.price
+
+    .purchase-box__main__registration-payment
+      %p.payment-message 支払い方法
+      - if @card.    == nil
+
+      - else
+        = link_to user_path(current_user.id), class:"link" do
+          .avatar-icon
+          %p マイページ
+        redirect_to new_user_card(current_user)
+
+    - @address.each do |a|
+      .purchase-box__main__registration-addless
+        %p.payment-message 配送先
+          = a.post_code
+          = a.prefecture
+          = a.city
+          = a.block
+          = a.last_name + =a.first_name 
+
+
+-# 購入ボタン
+
+.purchase-box__main__submit
+  .purchase-box__main__submit--purchase-btn
+    = f.submit '出品する', class: 'purchase-btn'
+
+
+
+
+
+
+.purchase-footer
+  .purchase-footer__text
+    .purchase-footer__text__box
+      %ul.purchase-footer-ul
+        %li.purchase-footer-list
+          = link_to 'プライバシーポリシー', '#', class: 'purchase-footer-link'
+        %li.purchase-footer-list
+          = link_to 'メルカリ利用規約', '#', class: 'purchase-footer-link'
+        %li.purchase-footer-list
+          = link_to '特定商取引に関する表記', '#', class: 'purchase-footer-link'
+  
+  .purchase-footer__logo
+    = link_to '/', class: 'footer-logo' do
+      = image_tag asset_path("logo/logo-white.png"), class: 'footer-logo'
+  .purchase-footer__appname
+    %p.purchase-last @FURIMA
